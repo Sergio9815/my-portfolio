@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section id="banner" class="major">
+      <div class="inner">
+        <header class="major">
+            <h1>Hi, my name is Forty</h1>
+        </header>
+        <div class="content">
+            <p>A responsive site template designed by HTML5 UP<br />
+            and released under the Creative Commons.</p>
+            <ul class="actions">
+              <li><a href="#one" class="button next scrolly">Get Started</a></li>
+            </ul>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
   },
 };
 </script>
+<style scoped>
+
+</style>
