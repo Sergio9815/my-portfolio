@@ -3,7 +3,7 @@
 
     <div class="contact__main">
       <section class="contact__form">
-        <form ref="form" @submit.prevent="sendEmail">
+        <form ref="form" @submit.prevent="sendEmail" id="goContact">
 
                 <div class="form__main-data">
                     <div class="form-content">
@@ -60,7 +60,7 @@
         <div id="last-data" class="info__data">
           <h3><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
           Dirección</h3>
-          <p>Panamá, Ciudad de Panamá</p>
+          <p>Distrito de Arraijan, provincia de Panamá Oeste, Panamá</p>
         </div>
       </section>
     </div>
@@ -138,20 +138,20 @@ form {
 
   .input {
     width: 100%;
-    height: 40px;
+    height: 50px;
     border: none;
     transition: 0.15s;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     background-color: var(--in-color);
     font-family: 'Source Sans Pro', sans-serif;
   }
   .input:hover
   {
-    border: 2px solid lightblue;
+    border: 2px solid #C1B3FF;
   }
   .input:focus {
-    border: 2px solid lightblue;
+    border: 2px solid #C1B3FF;
   }
   input {
     outline: none;
@@ -159,19 +159,19 @@ form {
 
   textarea {
     width: 100%;
-    height: 200px;
+    height: 250px;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     background-color: var(--in-color);
     font-family: 'Source Sans Pro', sans-serif;
   }
 
   textarea:hover {
-    border: 2px solid lightblue;
+    border: 2px solid #C1B3FF;
   }
 
-  textarea:focus {   border: 2px solid lightblue; }
+  textarea:focus {   border: 2px solid #C1B3FF; }
 
   label {
     font-size: 15px;
@@ -208,7 +208,7 @@ form {
     text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
   }
-  .btn:hover { background-color: lightblue; }
+  .btn:hover { background-color: #C1B3FF; }
 
   .hide-text-email {
     display: none;
@@ -236,22 +236,23 @@ form {
   border-bottom: none;
 }
 
-h3, p {
-  margin-left: 50px;
-}
-
 h3 {
+  margin-left: 50px;
   font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
+
 p {
   color: rgba(255, 255, 255, 0.568);
   margin-left: 100px;
   font-size: 18px;
   font-weight: lighter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h3 svg {
@@ -268,9 +269,10 @@ h3 svg {
 }
 
 @media only screen and (max-width: 1000px) {
-    .contact__main {
+  .contact__main {
       flex-direction: column;
   }
+
   .contact__form {
     width: 100%;
   }
@@ -279,13 +281,15 @@ h3 svg {
     width: 100%;
     border-left: none;
   }
+
   form {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.253);
   }
+
   .footer {
-  align-items: center;
-}
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -293,6 +297,11 @@ h3 svg {
     flex-direction: column;
   }
   .btn {
+    width: 100%;
+  }
+
+  h3, p {
+    margin-left: 0px;
     width: 100%;
   }
 }

@@ -1,13 +1,32 @@
 <template>
   <div id="app">
+    <sp-menu/>
     <router-view/>
+    <contact/>
   </div>
 </template>
 
+<script>
+import Contact from '@/views/Contact.vue';
+import SpMenu from '@/components/SpMenu.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Contact,
+    SpMenu,
+  },
+  methods: {
+    scrollToId(id) {
+      document.getElementById(id).scrollIntoView();
+    },
+  },
+};
+</script>
 <style>
 /* --- --- -- COLORS -- --- --- */
 :root {
-  --bg-color: #1c1b2a;
+  --bg-color: #19191f;
   --in-color:  rgba(212, 212, 255, 0.035);
 }
 
@@ -23,19 +42,6 @@ body {
   color: #1c1b2a;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
 /* --- --- -- LOCAL FONTS -- --- --- */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -45,4 +51,11 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'),
+    url('./assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+}
 </style>
