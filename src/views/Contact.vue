@@ -87,8 +87,8 @@ export default {
   align-items: center;
   justify-content: space-around;
   /* background-color: antiquewhite; */
-    font-family: 'Source Sans Pro', sans-serif;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+  font-family: 'Source Sans Pro', sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.253);
 }
 
 .contact__form {
@@ -107,7 +107,7 @@ form {
     flex-direction: column;
     gap: 30px;
     width: 90%;
-    height: 85vh;
+    /* height: 85vh; */
     /* background-color: aquamarine; */
   }
 
@@ -216,7 +216,6 @@ form {
 
 .contact__info {
   width: 40%;
-  height: 90vh;
   border-left: 1px solid rgba(255, 255, 255, 0.253);
   color: white;
   /* background-color: antiquewhite; */
@@ -285,6 +284,7 @@ h3 svg {
   form {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+    padding-bottom: 30px;
   }
 
   .footer {
@@ -303,6 +303,14 @@ h3 svg {
   h3, p {
     margin-left: 0px;
     width: 100%;
+  }
+
+  .contact__info {
+    margin-top: 60px;
+  }
+
+  form {
+    margin-top: 20px;
   }
 }
 </style>

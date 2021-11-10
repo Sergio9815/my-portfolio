@@ -180,5 +180,8 @@ h4 {
   .btn {
     width: 100%;
   }
+  .home {
+    height: 100vh;
+  }
 }
 </style>
