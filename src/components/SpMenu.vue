@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="nav_bg">
     <div id="nav">
       <div class="logo">
           <h2>Sagb</h2>
@@ -9,12 +9,12 @@
       <div v-show="showButton"
           @click="toggleMenu"
           v-animate-css.click="'rotateIn'" class="nav__menu-responsive">
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#fff"/><path fill="#FFF" d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#19191f"/><path fill="#19191f" d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
       </div>
       <div v-show="!showButton"
           @click="toggleMenu"
           v-animate-css.click="'rotateIn'" class="nav__menu-responsive">
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path fill="#fff" d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg>
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path fill="#19191f" d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg>
       </div>
       <sp-links2 v-on:closeLinks="toggleMenu" v-show="!showButton"/>
     </div>
@@ -43,10 +43,14 @@ export default {
 </script>
 
 <style scoped>
+#nav_bg {
+  background-color: lavender;
+}
+
 #nav {
   width: 90%;
-  /* background-color: lavender; */
   margin: auto;
+  height: 50px;
   gap: 50px;
   display: flex;
   align-items: center;
@@ -61,8 +65,8 @@ export default {
 }
 
 h2 {
-  color: var(--bg-color);
-  background-color: white;
+  color: white;
+  background-color: var(--bg-color);
   padding: 3px;
   width: 100px;
   letter-spacing: 2px;
@@ -71,7 +75,7 @@ h2 {
 }
 
 h3 {
-  color: white;
+  color: var(--bg-color);
   font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -95,9 +99,10 @@ h3 {
   }
   #nav {
     width: 100%;
-    background-color: var(--bg-color);
     position: fixed;
     margin-top: -10px;
+    height: 70px;
+    background-color: lavender;
   }
   .logo {
     margin-left: 30px;

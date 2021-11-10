@@ -45,16 +45,16 @@ export default {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.712);
+  color: #19191fbe;
   font-family: 'Raleway', sans-serif;
 }
 
 #nav a:hover {
-  color: white;
+  color: #19191f;
 }
 
 #nav a.router-link-exact-active {
-  color: #fcfcfc;
+  color: #19191f;
 }
 
 .nav__links {
