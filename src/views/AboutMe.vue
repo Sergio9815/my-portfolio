@@ -27,15 +27,15 @@ export default {
 </script>
 <style scoped>
 .about {
-  width: 100%;
-  background-color: #c1b3ff94;
+  width: 90%;
+  /* background-color: #c1b3ff94; */
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-around;
   margin: auto;
   padding: 20px 0px;
   color: white;
+  height: 100vh;
 }
 
 figure {
@@ -59,13 +59,13 @@ figure {
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
-  color: white;
+  color: var(--bg-color);
   font-size: 35px;
   text-transform: uppercase;
 }
 
 p {
-  color: rgba(255, 255, 255, 0.945);
+  color: var(--bg-color);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
@@ -77,20 +77,20 @@ p {
 
   .btn svg {
     width: 16px;
+    margin-right: 15px;
   }
 
   .btn {
     width: 250px;
     height: 45px;
     display: flex;
-    gap: 10px;
     align-items: center;
     justify-content: center;
     justify-self: flex-start;
     background-color: transparent;
     text-decoration: none;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid var(--bg-color);
+    color: var(--bg-color);
     cursor: pointer;
     outline: none;
     letter-spacing: 2px;
@@ -99,17 +99,15 @@ p {
     font-family: 'Source Sans Pro', sans-serif;
   }
   .btn:hover {
-    background-color: #fdfdfd;
     color: var(--bg-color);
   }
 
 @media only screen and (max-width: 1000px) {
   .about {
     flex-direction: column-reverse;
-    gap: 10px;
   }
   .about img {
-    height: 60vh;
+    height: 50vh;
     border-radius: 200px;
   }
 
@@ -118,7 +116,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .about {
     padding: 0px;
   }
@@ -131,8 +129,8 @@ p {
     width: 90%;
   }
     .btn {
-    width: 100%;
-    margin-bottom: 20px;
+      width: 100%;
+      margin-bottom: 20px;
   }
 }
 

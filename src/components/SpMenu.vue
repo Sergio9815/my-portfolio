@@ -9,12 +9,12 @@
       <div v-show="showButton"
           @click="toggleMenu"
           v-animate-css.click="'rotateIn'" class="nav__menu-responsive">
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#19191f"/><path fill="#19191f" d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" class="svg-inline--fa fa-grip-lines fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M496 288H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-128H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path></svg>
       </div>
       <div v-show="!showButton"
           @click="toggleMenu"
           v-animate-css.click="'rotateIn'" class="nav__menu-responsive">
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path fill="#19191f" d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="not-equal" class="svg-inline--fa fa-not-equal fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32h-23.88l51.87-66.81c5.37-7.02 4.04-17.06-2.97-22.43L415.61 3.3c-7.02-5.38-17.06-4.04-22.44 2.97L311.09 112H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h204.56l-74.53 96H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h55.49l-51.87 66.81c-5.37 7.01-4.04 17.05 2.97 22.43L64 508.7c7.02 5.38 17.06 4.04 22.43-2.97L168.52 400H416c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32H243.05l74.53-96H416z"></path></svg>
       </div>
       <sp-links2 v-on:closeLinks="toggleMenu" v-show="!showButton"/>
     </div>
@@ -44,14 +44,13 @@ export default {
 
 <style scoped>
 #nav_bg {
-  background-color: lavender;
+  background-color: white;
 }
 
 #nav {
   width: 90%;
   margin: auto;
   height: 50px;
-  gap: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,8 +59,9 @@ export default {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-around;
+  /* gap: 10px; */
+  width: 175px;
 }
 
 h2 {
@@ -100,9 +100,8 @@ h3 {
   #nav {
     width: 100%;
     position: fixed;
-    margin-top: -10px;
-    height: 70px;
-    background-color: lavender;
+    height: 60px;
+    background-color: white;
   }
   .logo {
     margin-left: 30px;

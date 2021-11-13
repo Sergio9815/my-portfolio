@@ -8,7 +8,7 @@
         </router-link>
 
         <router-link
-          v-animate-css.hover="'pulse'" to="/proyectos"
+          v-animate-css.hover="'pulse'" to="/projects"
           @click.native="scrollToId('goProyectos')">
           Proyectos
         </router-link>
@@ -52,6 +52,8 @@ export default {
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.712);
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
 }
 .nav__menu-responsive {
   width: 20px;
@@ -62,14 +64,10 @@ export default {
 }
 .nav__links2 {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 100px;
   position: fixed;
   padding-top: 50px;
   width: 100%;
-  height: 100vh;
+  height: 88vh;
   background-color: var(--bg-color);
   top: 68px;
   left: -100%;
@@ -86,6 +84,9 @@ export default {
   .nav__links2 {
     display: flex;
     left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
   #nav a:hover {
     color: white;

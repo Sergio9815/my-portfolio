@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="form__secondary-data">
-                    <div class="form-content">
+                    <div class="form-content-2">
                       <label for="message">
                       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="comments" class="svg-inline--fa fa-comments fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M532 386.2c27.5-27.1 44-61.1 44-98.2 0-80-76.5-146.1-176.2-157.9C368.3 72.5 294.3 32 208 32 93.1 32 0 103.6 0 192c0 37 16.5 71 44 98.2-15.3 30.7-37.3 54.5-37.7 54.9-6.3 6.7-8.1 16.5-4.4 25 3.6 8.5 12 14 21.2 14 53.5 0 96.7-20.2 125.2-38.8 9.2 2.1 18.7 3.7 28.4 4.9C208.1 407.6 281.8 448 368 448c20.8 0 40.8-2.4 59.8-6.8C456.3 459.7 499.4 480 553 480c9.2 0 17.5-5.5 21.2-14 3.6-8.5 1.9-18.3-4.4-25-.4-.3-22.5-24.1-37.8-54.8zm-392.8-92.3L122.1 305c-14.1 9.1-28.5 16.3-43.1 21.4 2.7-4.7 5.4-9.7 8-14.8l15.5-31.1L77.7 256C64.2 242.6 48 220.7 48 192c0-60.7 73.3-112 160-112s160 51.3 160 112-73.3 112-160 112c-16.5 0-33-1.9-49-5.6l-19.8-4.5zM498.3 352l-24.7 24.4 15.5 31.1c2.6 5.1 5.3 10.1 8 14.8-14.6-5.1-29-12.3-43.1-21.4l-17.1-11.1-19.9 4.6c-16 3.7-32.5 5.6-49 5.6-54 0-102.2-20.1-131.3-49.7C338 339.5 416 272.9 416 192c0-3.4-.4-6.7-.7-10C479.7 196.5 528 238.8 528 288c0 28.7-16.2 50.6-29.7 64z"></path></svg>
                       Deja un mensaje</label>
@@ -150,7 +150,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* background-color: antiquewhite; */
+  background-color: var(--bg-color);
   font-family: 'Source Sans Pro', sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 0.253);
 }
@@ -167,11 +167,11 @@ export default {
 form {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
     width: 90%;
-    /* height: 85vh; */
+    height: 65vh;
     /* background-color: aquamarine; */
   }
 
@@ -179,8 +179,7 @@ form {
   display: flex;
   width: 90%;
   align-items: center;
-  justify-content: space-around;
-  gap: 35px;
+  justify-content: space-between;
   /* background-color: lightgreen; */
 }
 
@@ -190,18 +189,15 @@ form {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  /* background-color: steelblue; */
-  gap: 20px;
+  /* background-color: rgb(78, 183, 231); */
 }
   .form-content {
-    width: 100%;
+    width: 47%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
   }
 
   .input {
-    width: 100%;
     height: 50px;
     border: none;
     transition: 0.15s;
@@ -209,6 +205,7 @@ form {
     color: white;
     background-color: var(--in-color);
     font-family: 'Source Sans Pro', sans-serif;
+    /* background-color: darksalmon; */
   }
   .input:hover
   {
@@ -221,14 +218,21 @@ form {
     outline: none;
   }
 
-  textarea {
+  .form-content-2 {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  textarea {
+    width: 99%;
     height: 250px;
     border: none;
     color: white;
     font-size: 20px;
     background-color: var(--in-color);
     font-family: 'Source Sans Pro', sans-serif;
+    /* background-color: darksalmon; */
   }
 
   textarea:hover {
@@ -239,25 +243,27 @@ form {
 
   label {
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: white;
     display: flex;
-    gap: 5px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
+    margin-top: 20px;
+    /* background-color: darksalmon; */
+
   }
 
   svg {
     width: 15.5px;
     margin-bottom: 2px;
+    margin-right: 15px;
   }
 
   .btn {
     width: 250px;
     height: 45px;
     display: flex;
-    gap: 10px;
     align-items: center;
     justify-content: center;
     justify-self: flex-start;
@@ -268,6 +274,7 @@ form {
     cursor: pointer;
     outline: none;
     letter-spacing: 2px;
+    margin-top: 20px;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
@@ -305,7 +312,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 p {
@@ -320,6 +327,7 @@ p {
 
 h3 svg {
   width: 30px;
+  margin-right: 10px;
 }
 
 .footer {
@@ -329,11 +337,12 @@ h3 svg {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  background-color: var(--bg-color);
 }
 
 @media only screen and (max-width: 1000px) {
   .contact__main {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .contact__form {
@@ -367,6 +376,10 @@ h3 svg {
     width: 100%;
   }
 
+  .contact__form {
+    height: 75vh;
+  }
+
   h3, p {
     margin-left: 0px;
     width: 100%;
@@ -377,6 +390,12 @@ h3 svg {
   }
 
   form {
+    margin-top: 20px;
+  }
+  .form-content {
+    width: 100%;
+  }
+  label {
     margin-top: 20px;
   }
 }

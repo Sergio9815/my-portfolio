@@ -28,21 +28,20 @@ export default {
 .nav__social {
   display: flex;
   align-items: center;
-  width: 170px;
+  width: 130px;
   height: 20px;
-  padding-left: 50px;
+  padding-left: 75px;
 }
 a {
   color: rgba(255, 255, 255, 0.822);
 }
 a:hover {
-  color: white;
+  color: #7FD4FF;
 }
 .social__btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-around;
   width: 100%;
 }
 svg {

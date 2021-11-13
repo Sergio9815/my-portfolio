@@ -26,12 +26,12 @@ export default {
 <style>
 /* --- --- -- COLORS -- --- --- */
 :root {
-  --bg-color: #19191f;
+  --bg-color: #131313;
   --in-color:  rgba(212, 212, 255, 0.035);
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: #E6E6E6;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -59,6 +59,14 @@ body {
   src: local('Raleway'),
     url('./assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
   font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato'),
+    url('./assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 300;
   font-display: swap;
 }
 </style>
