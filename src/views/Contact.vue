@@ -1,9 +1,10 @@
 <template>
   <div class="contact">
 
+    <h4 id="goContact">Contacto</h4>
     <div class="contact__main">
       <section class="contact__form">
-        <form ref="form" @submit.prevent="sendEmail" id="goContact">
+        <form ref="form" @submit.prevent="sendEmail">
 
                 <div class="form__main-data">
                     <div class="form-content">
@@ -145,9 +146,25 @@ export default {
 };
 </script>
 <style scoped>
+.contact {
+  background-color: var(--bg-color);
+  color: white;
+}
+
+h4 {
+  font-size: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  padding: 50px 0px 30px 0px;
+  margin-top: 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+}
+
 .contact__main {
   width: 100%;
   display: flex;
+  margin-top: -52px;
   align-items: center;
   justify-content: space-around;
   background-color: var(--bg-color);
@@ -390,13 +407,13 @@ h3 svg {
   }
 
   form {
-    margin-top: 20px;
+    margin-top: 100px;
   }
   .form-content {
     width: 100%;
   }
   label {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }
 </style>

@@ -30,6 +30,10 @@ export default {
   --in-color:  rgba(212, 212, 255, 0.035);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #E6E6E6;
   margin: 0;
