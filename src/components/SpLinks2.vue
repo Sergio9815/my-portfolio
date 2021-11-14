@@ -63,17 +63,17 @@ export default {
   cursor: pointer;
 }
 .nav__links2 {
-  display: none;
-  position: fixed;
-  padding-top: 50px;
-  width: 100%;
-  height: 88vh;
-  background-color: var(--bg-color);
-  top: 68px;
-  left: -100%;
-  text-align: center;
-  transition: all .5s;
-  z-index: 0;
+    display: none;
+    position: fixed;
+    padding-top: 30px;
+    width: 100%;
+    height: 88vh;
+    background-color: var(--bg-color);
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 0;
 }
 #nav a.router-link-exact-active {
   color: rgba(255, 255, 255, 0.712);
