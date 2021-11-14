@@ -1,5 +1,5 @@
 <template functional>
-    <div id="goAbout" class="about">
+    <div id="About" class="about">
         <figure>
           <img src="../assets/me.webp" alt="">
         </figure>

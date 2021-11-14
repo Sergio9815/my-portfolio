@@ -1,7 +1,7 @@
 <template >
     <div class="project-main">
         <section class="projects">
-          <h3 id="goProyectos">Mis Proyectos</h3>
+          <h3 id="Projects">Mis Proyectos</h3>
             <div class="projects__cards-container">
 
               <div class="p-card">

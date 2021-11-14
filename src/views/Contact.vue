@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
 
-    <h4 id="goContact">Contacto</h4>
+    <h4 id="Contact">Contacto</h4>
     <div class="contact__main">
       <section class="contact__form">
         <form ref="form" @submit.prevent="sendEmail">

@@ -7,23 +7,20 @@
           Inicio
         </router-link>
 
-        <router-link
-          v-animate-css.hover="'pulse'" to="/projects"
-          @click.native="scrollToId('goProyectos')">
+        <a href="#Projects"
+          v-animate-css.hover="'pulse'">
           Proyectos
-        </router-link>
+        </a>
 
-        <router-link v-animate-css.hover="'pulse'" to="/about"
-          @click.native="scrollToId('goAbout')">
+        <a href="#About"
+          v-animate-css.hover="'pulse'">
           Sobre mí
-        </router-link>
+        </a>
 
-        <router-link
-          v-animate-css.hover="'pulse'"
-          to="/contact"
-          @click.native="scrollToId('goContact')">
+        <a href="#Contact"
+          v-animate-css.hover="'pulse'">
           Contacto
-        </router-link>
+        </a>
 
         <sp-social-btn/>
     </section>
