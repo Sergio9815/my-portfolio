@@ -1,6 +1,6 @@
 <template>
     <section
-          @click="toggleLinks" class="nav__links2 animate__animated animate__fadeInLeft">
+          @click="toggleLinks" class="nav__links2 animate__animated animate__slideInRight">
 
         <router-link v-animate-css.hover="'pulse'" to="/"
           @click.native="scrollToId('goInicio')">

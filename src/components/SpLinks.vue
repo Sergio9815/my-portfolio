@@ -1,7 +1,7 @@
 <template>
   <section class="nav__links">
 
-        <router-link r-linkv-animate-css.hover="'pulse'" to="/"
+        <router-link v-animate-css.hover="'pulse'" to="/"
           @click.native="scrollToId('goInicio')">
           Inicio
         </router-link>
@@ -47,7 +47,7 @@ export default {
 }
 
 #nav a:hover {
-  color: #C1B3FF;
+  color: #94ffd3;
 }
 
 .nav__links {

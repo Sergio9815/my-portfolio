@@ -35,7 +35,7 @@ a {
   color: rgba(255, 255, 255, 0.822);
 }
 a:hover {
-  color: #C1B3FF;
+  color: #94ffd3;
 }
 .social__btn {
   display: flex;

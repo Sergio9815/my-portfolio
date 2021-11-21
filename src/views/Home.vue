@@ -27,8 +27,8 @@
               </div>
           </section>
       </div>
-      <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#131313" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,112C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-      <!-- <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#131313" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,53.3C640,85,800,171,960,192C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> -->
+      <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#16161A" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,112C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+      <!-- <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#16161A" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,53.3C640,85,800,171,960,192C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> -->
       <about-me/>
       <projects/>
     </div>
@@ -56,7 +56,6 @@ export default {
 
 .main {
   width: 100%;
-  background-image: url(../assets/bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -64,12 +63,13 @@ export default {
 
 .main__bg {
   width: 100%;
-  background-color: rgba(19, 19, 19, 0.986)
+  background-color: #16161A;
 }
 
 .home__svg svg {
   width: 500px;
   height: 500px;
+  margin-top: 100px;
 }
 
 .home__desc {
@@ -91,12 +91,6 @@ export default {
 
 h1 {
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 0;
-}
-
-h4 {
-  font-weight: lighter;
-  font-family: 'Raleway', sans-serif;
   margin: 0;
 }
 

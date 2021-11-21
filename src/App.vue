@@ -26,7 +26,7 @@ export default {
 <style>
 /* --- --- -- COLORS -- --- --- */
 :root {
-  --bg-color: #131313;
+  --bg-color: #16161A;
   --in-color:  rgba(212, 212, 255, 0.035);
 }
 
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  background-color: #3F3F3F;
+  background-color: #242629;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

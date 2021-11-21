@@ -166,7 +166,6 @@
                     </p>
                     <p class="tools">Herramientas:
                       <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="css3-alt" class="svg-inline--fa fa-css3-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
-                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="html5" class="svg-inline--fa fa-html5 fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
                     </p>
                     <a v-animate-css.hover="'pulse'" class="btn" href="https://dh-cartoon-css.vercel.app/">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" class="svg-inline--fa fa-external-link-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
@@ -189,7 +188,7 @@ export default {
 <style scoped>
 .project-main {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #242629;
 }
 
 .projects {
@@ -205,7 +204,7 @@ export default {
 
 h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  color: var(--bg-color);
+  color: #E6E6E6;
   font-size: 40px;
   margin: 40px 20px;
 }
@@ -222,17 +221,17 @@ h3 {
 }
 
 .p-card {
-  background-color: #E6E6E6;
+  background-color: #16161A;
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.315);
+  /* border: 2px solid rgba(255, 255, 255, 0.315); */
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  box-shadow: 0 8px 32px 0 rgba(206, 206, 206, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(206, 206, 206, 0.37);
   backdrop-filter: blur( 2.5px );
-  -webkit-backdrop-filter: blur( 2.5px );
+  -webkit-backdrop-filter: blur( 2.5px ); */
   z-index: 0;
 }
 
@@ -252,23 +251,23 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  color: white;
 }
 
 h4 {
-  color: #19191fcc;
   margin: 0;
   margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
 }
 
 .p-card-desc p {
   text-align: justify;
-  color: #19191f8f;
+  color: rgba(255, 255, 255, 0.801);
   line-height: 25px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
 }
 
 .tools {
@@ -284,7 +283,7 @@ h4 {
 }
 
 .fa-vuejs {
-  color: #3eac7a;
+  color: #94ffd3;
 }
 
 .fa-css3-alt {
@@ -292,17 +291,16 @@ h4 {
 }
 
 .fa-js-square {
-  background-color: rgb(114, 114, 114);
-  color: #fff48c;
+  color: #fdf4a0;
 }
 
 .fa-html5 {
-  color: #ff7950;
+  color: #fd9c7f;
 
 }
 
 .fa-sass {
-  color: #ff5099;
+  color: #ff86b9;
 }
 
   .btn svg {
@@ -319,8 +317,8 @@ h4 {
     justify-self: flex-start;
     background-color: transparent;
     text-decoration: none;
-    border: 2px solid var(--bg-color);
-    color: var(--bg-color);
+    border: 2px solid white;
+    color: white;
     cursor: pointer;
     outline: none;
     letter-spacing: 2px;
@@ -329,7 +327,8 @@ h4 {
     font-family: 'Source Sans Pro', sans-serif;
   }
   .btn:hover {
-    color: var(--bg-color);
+    color: #94ffd3;
+    border: 2px solid #94ffd3;
   }
 
 @media only screen and (max-width: 1000px) {
@@ -338,6 +337,10 @@ h4 {
   }
   .projects__cards-container {
     grid-template-columns: repeat(1,1fr);
+  }
+  h3 {
+    margin: 40px 0;
+    width: 100%;
   }
 }
 
