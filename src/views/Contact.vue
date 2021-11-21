@@ -343,17 +343,18 @@ p {
 }
 
 h3 svg {
-  width: 30px;
+  width: 20px;
   margin-right: 10px;
 }
 
 .footer {
-  width: 100%;
+  width: 90%;
   height: 15vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  padding-left: 70px;
   background-color: var(--bg-color);
 }
 
@@ -382,6 +383,7 @@ h3 svg {
 
   .footer {
     align-items: center;
+    padding: 20px;
   }
 }
 

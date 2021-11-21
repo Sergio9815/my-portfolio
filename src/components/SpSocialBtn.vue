@@ -30,13 +30,12 @@ export default {
   align-items: center;
   width: 130px;
   height: 20px;
-  padding-left: 75px;
 }
 a {
   color: rgba(255, 255, 255, 0.822);
 }
 a:hover {
-  color: #7FD4FF;
+  color: #C1B3FF;
 }
 .social__btn {
   display: flex;
@@ -45,7 +44,7 @@ a:hover {
   width: 100%;
 }
 svg {
-  width: 25px;
+  width: 23px;
 }
 /* --- --- -- Responsive design -- --- --- */
 @media only screen and (max-width: 1000px) {
@@ -54,7 +53,7 @@ svg {
     border-bottom: 2px solid var(--wine);
   }
   svg {
-  width: 20px;
+    width: 26px;
   }
   .nav__social {
   padding-left: 0px;

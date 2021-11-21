@@ -38,20 +38,16 @@ export default {
 <style scoped>
 
 #nav a {
-  font-weight: bold;
+  font-weight: normal;
   text-decoration: none;
-  text-transform: uppercase;
   letter-spacing: 2px;
-  color: #19191f9f;
+  text-transform: uppercase;
+  color: #fff;
   font-family: 'Lato', sans-serif;
 }
 
 #nav a:hover {
-  color: #19191f;
-}
-
-#nav a.router-link-exact-active {
-  color: #19191f;
+  color: #C1B3FF;
 }
 
 .nav__links {

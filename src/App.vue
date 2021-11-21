@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  background-color: #E6E6E6;
+  background-color: #3F3F3F;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

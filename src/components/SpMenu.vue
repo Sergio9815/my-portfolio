@@ -2,10 +2,13 @@
   <div id="nav_bg">
     <div id="nav">
       <div class="logo">
-          <h2>Sagb</h2>
+          <h2>Sagb-</h2>
           <h3>Dev</h3>
       </div>
       <sp-links/>
+      <div class="social">
+        <sp-social-btn/>
+      </div>
       <div v-show="showButton"
           @click="toggleMenu"
           v-animate-css.click="'rotateIn'" class="nav__menu-responsive">
@@ -24,10 +27,11 @@
 <script>
 import SpLinks from '@/components/SpLinks.vue';
 import SpLinks2 from '@/components/SpLinks2.vue';
+import SpSocialBtn from '@/components/SpSocialBtn.vue';
 
 export default {
   name: 'QgMenu',
-  components: { SpLinks, SpLinks2 },
+  components: { SpLinks, SpLinks2, SpSocialBtn },
   data() {
     return {
       showButton: true,
@@ -44,42 +48,39 @@ export default {
 
 <style scoped>
 #nav_bg {
-  background-color: white;
+  background-color: #1d1d1d;
 }
 
 #nav {
   width: 90%;
   margin: auto;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 1;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  /* gap: 10px; */
-  width: 175px;
+  justify-content: center;
 }
 
 h2 {
-  color: white;
-  background-color: var(--bg-color);
-  padding: 3px;
-  width: 100px;
+  color: #ffffff;
   letter-spacing: 2px;
-  font-size: 18px;
+  font-size: 25px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 h3 {
-  color: var(--bg-color);
+  color: #caf6bb;
   font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .nav__menu-responsive {
@@ -91,21 +92,26 @@ h3 {
 
 /* --- --- -- Responsive design -- --- --- */
 @media only screen and (max-width: 1000px) {
-  .nav__links {
+  .nav__links, .social {
     display: none;
   }
   .nav__menu-responsive {
     display: flex;
     margin-right: 40px;
+    color: white;
   }
   #nav {
     width: 100%;
     position: fixed;
     height: 60px;
-    background-color: white;
+    background-color: #1d1d1d;
+    justify-content: space-between;
   }
-  .logo {
-    margin-left: 30px;
+  h2 {
+    margin-left: 40px;
+  }
+  h3 {
+    color: #C1B3FF;
   }
 }
 </style>

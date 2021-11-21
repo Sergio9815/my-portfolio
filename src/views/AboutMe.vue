@@ -33,9 +33,8 @@ export default {
   align-items: center;
   justify-content: space-around;
   margin: auto;
-  padding: 20px 0px;
+  padding: 50px 0px;
   color: white;
-  height: 100vh;
 }
 
 figure {
@@ -59,13 +58,13 @@ figure {
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
-  color: var(--bg-color);
+  color: #E6E6E6;
   font-size: 35px;
   text-transform: uppercase;
 }
 
 p {
-  color: var(--bg-color);
+  color: #E6E6E6;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
@@ -87,10 +86,10 @@ p {
     align-items: center;
     justify-content: center;
     justify-self: flex-start;
-    background-color: transparent;
+    background-color: #E6E6E6;
     text-decoration: none;
-    border: 2px solid var(--bg-color);
     color: var(--bg-color);
+    border-radius: 2px;
     cursor: pointer;
     outline: none;
     letter-spacing: 2px;
@@ -99,7 +98,7 @@ p {
     font-family: 'Source Sans Pro', sans-serif;
   }
   .btn:hover {
-    color: var(--bg-color);
+    background-color: #C1B3FF;
   }
 
 @media only screen and (max-width: 1000px) {
@@ -117,9 +116,6 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
-  .about {
-    padding: 0px;
-  }
   .about img {
     display: none;
   }
@@ -128,9 +124,9 @@ p {
     margin-top: 20px;
     width: 90%;
   }
-    .btn {
-      width: 100%;
-      margin-bottom: 20px;
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
