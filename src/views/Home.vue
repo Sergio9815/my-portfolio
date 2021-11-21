@@ -67,9 +67,12 @@ export default {
 }
 
 .home__svg svg {
+  margin-top: 100px;
+}
+
+.home__svg svg {
   width: 500px;
   height: 500px;
-  margin-top: 100px;
 }
 
 .home__desc {
