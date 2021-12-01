@@ -32,6 +32,8 @@ export default {
 
 html {
   scroll-behavior: smooth;
+  /* font-size: 62.5%; */
+  /* 1rem = 10px */
 }
 
 body {
