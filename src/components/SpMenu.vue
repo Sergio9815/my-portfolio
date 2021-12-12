@@ -31,7 +31,11 @@ import SpSocialBtn from '@/components/SpSocialBtn.vue';
 
 export default {
   name: 'QgMenu',
-  components: { SpLinks, SpLinks2, SpSocialBtn },
+  components: {
+    SpLinks,
+    SpLinks2,
+    SpSocialBtn,
+  },
   data() {
     return {
       showButton: true,
@@ -49,6 +53,9 @@ export default {
 <style scoped>
 #nav_bg {
   background-color: #242629;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 #nav {
@@ -58,7 +65,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  z-index: 1;
+  background-color: #242629;
 }
 
 .logo {
@@ -102,9 +109,7 @@ h3 {
   }
   #nav {
     width: 100%;
-    position: fixed;
     height: 60px;
-    background-color: #242629;
     justify-content: space-between;
   }
   h2 {

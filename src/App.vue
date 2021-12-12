@@ -28,6 +28,59 @@ export default {
 :root {
   --bg-color: #16161A;
   --in-color:  rgba(212, 212, 255, 0.035);
+  --color-text: #242629;
+  --color-gray: #E6E6E6;
+}
+
+.primaryDark {
+  background-color: var(--bg-color);
+  color: var(--color-gray);
+  transition: .5s;
+}
+.primaryLight {
+  background-color: #fff;
+  color: var(--color-text);
+  transition: .5s;
+}
+
+.secondaryLight {
+  background-color: #bebebe;
+  color: var(--color-text);
+    transition: .5s;
+}
+.secondaryDark {
+  background-color: #242629;
+  color: var(--color-gray);
+      transition: .5s;
+}
+
+.tertiaryLight {
+  background-color: transparent;
+    color: var(--color-text);
+}
+.tertiaryDark {
+  background-color: #caf6bb;
+  color: var(--color-text);
+}
+
+.glass {
+  background: rgba( 255, 255, 255, 0.4 );
+  color: var(--color-text);
+}
+
+.glassDark {
+  background-color: var(--bg-color);
+  color: #fff;
+}
+
+.glassDark-btn {
+  background-color: var(--bg-color);
+  color: #fff;
+}
+
+.glassDark-btn:hover {
+  color: #94ffd3;
+  border: 2px solid #94ffd3;
 }
 
 html {
@@ -37,7 +90,6 @@ html {
 }
 
 body {
-  background-color: #242629;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

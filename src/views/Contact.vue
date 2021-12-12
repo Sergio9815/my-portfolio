@@ -286,7 +286,7 @@ form {
     justify-self: flex-start;
     background-color: white;
     text-decoration: none;
-    border: none;
+    border: 2px solid #16161A;
     color: var(--bg-color);
     cursor: pointer;
     outline: none;

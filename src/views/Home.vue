@@ -1,22 +1,23 @@
 <template >
     <div>
-      <span id="start-page"></span>
-        <a href="#start-page" class="btn-flotante"
-          >
-          <img src="../assets/arrow.png" alt="">
-        </a>
+        <div class="btn-flotante">
+          <sp-theme/>
+        </div>
       <div class="main">
-          <section class="main__bg">
+          <section class="main__bg" :class="darkTheme ? 'primaryLight': 'primaryDark'">
 
               <div class="home" id="goInicio">
                 <div class="home__desc">
                     <div class="desc__title">
                       <h1>Sergio González</h1>
                     </div>
-                    <p class="desc__p">Frontend developer apasionado por el
+                    <p class="desc__p"
+                      >Frontend developer apasionado por el
                       desarrollo web mediante el empleo de diversas tecnologías.
                     </p>
-                    <a v-animate-css.hover="'pulse'" class="btn" href="https://drive.google.com/file/d/1S_66NNE9IYL7P2Vq6HN9sbMoybgpwy0_/view?usp=sharing">
+                    <a
+                    :class="darkTheme ? 'tertiaryLight': 'tertiaryDark'"
+                    v-animate-css.hover="'pulse'" class="btn" href="https://drive.google.com/file/d/1S_66NNE9IYL7P2Vq6HN9sbMoybgpwy0_/view?usp=sharing">
                         Descargar CV
                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="long-arrow-alt-right" class="svg-inline--fa fa-long-arrow-alt-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>
                     </a>
@@ -27,8 +28,9 @@
               </div>
           </section>
       </div>
-      <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#16161A" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,112C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-      <!-- <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#16161A" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,53.3C640,85,800,171,960,192C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> -->
+      <div :class="!darkTheme ? 'secondaryDark' : 'secondaryLight'">
+              <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path :fill="darkTheme ? '#fff' : '#16161A'" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,112C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+      </div>
       <about-me/>
       <projects/>
     </div>
@@ -37,21 +39,29 @@
 <script>
 import AboutMe from '@/views/AboutMe.vue';
 import Projects from '@/views/Projects.vue';
+import SpTheme from '@/components/SpTheme.vue';
 
 export default {
-  components: { AboutMe, Projects },
+  components: { AboutMe, Projects, SpTheme },
   name: 'Home',
+  computed: {
+    darkTheme: {
+      get() {
+        return this.$store.state.darkTheme;
+      },
+    },
+  },
 };
 </script>
 <style scoped>
 .home {
   width: 80%;
-  /* background-color: lightblue; */
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
   height: 90vh;
+  padding-top: 70px;
 }
 
 .main {
@@ -63,7 +73,6 @@ export default {
 
 .main__bg {
   width: 100%;
-  background-color: #16161A;
 }
 
 .home__svg svg {
@@ -77,7 +86,6 @@ export default {
 
 .home__desc {
   width: 700px;
-  /* background-color: rgb(177, 161, 161); */
 }
 
 .desc__title {
@@ -86,7 +94,6 @@ export default {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  color: white;
   font-size: 40px;
   text-transform: uppercase;
   width: 80%;
@@ -98,7 +105,6 @@ h1 {
 }
 
 .desc__p {
-  color: rgb(255, 255, 255);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
@@ -121,11 +127,9 @@ h1 {
     align-items: center;
     justify-content: center;
     justify-self: flex-start;
-    background-color: transparent;
     text-decoration: none;
-    /* border: 2px solid white; */
+    border: 2px solid;
     color: var(--bg-color);
-    background-color: #caf6bb;
     border-radius: 2px;
     cursor: pointer;
     outline: none;
@@ -136,6 +140,7 @@ h1 {
   }
   .btn:hover {
     color: var(--bg-color);
+    background-color: #caf6bb;
   }
 
 #bottom-decoration {
@@ -160,6 +165,7 @@ h1 {
   }
   .home {
     height: 100vh;
+    padding-top: 0px;
   }
   .home__desc {
     margin: auto;
@@ -194,20 +200,14 @@ h1 {
 }
 
 /* --- --- -- GO UP BUTTON -- --- --- */
-#start-page {
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-}
 .btn-flotante {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
   color: var(--bg-color);
   border-radius: 5px;
-  border: 2px solid var(--bg-color);
+  border: 2px solid #caf6bb;
   letter-spacing: 2px;
-  background-color: transparent;
   padding: 12px 18px;
   position: fixed;
   bottom: 30px;
@@ -217,11 +217,9 @@ h1 {
   z-index: 99;
 }
 .btn-flotante:hover {
-  background-color: var(--background);
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-7px);
 }
-
 .btn-flotante img {
   width: 15px;
 }
