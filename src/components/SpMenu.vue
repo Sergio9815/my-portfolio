@@ -52,10 +52,13 @@ export default {
 
 <style scoped>
 #nav_bg {
-  background-color: #242629;
+  background-color: var(--color-text);
   position: fixed;
   width: 100%;
   z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 #nav {
@@ -65,7 +68,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #242629;
+  background-color: var(--color-text);
 }
 
 .logo {
@@ -75,7 +78,7 @@ export default {
 }
 
 h2 {
-  color: #ffffff;
+  color: var(--color-white);
   letter-spacing: 2px;
   font-size: 25px;
   text-transform: uppercase;
@@ -83,7 +86,7 @@ h2 {
 }
 
 h3 {
-  color: #caf6bb;
+  color: var(--color-cyan);
   font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -105,7 +108,7 @@ h3 {
   .nav__menu-responsive {
     display: flex;
     margin-right: 40px;
-    color: white;
+    color: var(--color-white);
   }
   #nav {
     width: 100%;
@@ -116,7 +119,7 @@ h3 {
     margin-left: 40px;
   }
   h3 {
-    color: #C1B3FF;
+    color: var(--color-purple);
   }
 }
 </style>

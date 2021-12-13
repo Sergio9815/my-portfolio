@@ -29,7 +29,7 @@
           </section>
       </div>
       <div :class="!darkTheme ? 'secondaryDark' : 'secondaryLight'">
-              <svg id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path :fill="darkTheme ? '#fff' : '#16161A'" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,112C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+              <svg :class="darkTheme ? 'bgl' : 'bgd'" id="bottom-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="currentColor" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,112C640,139,800,181,960,186.7C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
       </div>
       <about-me/>
       <projects/>
@@ -54,6 +54,16 @@ export default {
 };
 </script>
 <style scoped>
+.bgl path {
+  fill: var(--color-white);
+  transition: .5s;
+}
+
+.bgd path {
+  fill: var(--bg-color);
+    transition: .5s;
+}
+
 .home {
   width: 80%;
   display: flex;
@@ -89,7 +99,7 @@ export default {
 }
 
 .desc__title {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -140,7 +150,7 @@ h1 {
   }
   .btn:hover {
     color: var(--bg-color);
-    background-color: #caf6bb;
+    background-color: var(--color-cyan);
   }
 
 #bottom-decoration {
@@ -206,7 +216,7 @@ h1 {
   font-weight: bold;
   color: var(--bg-color);
   border-radius: 5px;
-  border: 2px solid #caf6bb;
+  border: 2px solid var(--color-cyan);
   letter-spacing: 2px;
   padding: 12px 18px;
   position: fixed;

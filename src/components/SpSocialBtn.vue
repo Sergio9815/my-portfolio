@@ -35,7 +35,7 @@ a {
   color: rgba(255, 255, 255, 0.822);
 }
 a:hover {
-  color: #94ffd3;
+  color: var(--color-cyan);
 }
 .social__btn {
   display: flex;
@@ -48,10 +48,6 @@ svg {
 }
 /* --- --- -- Responsive design -- --- --- */
 @media only screen and (max-width: 1000px) {
-  a:hover {
-    color: var(--brown);
-    border-bottom: 2px solid var(--wine);
-  }
   svg {
     width: 26px;
   }

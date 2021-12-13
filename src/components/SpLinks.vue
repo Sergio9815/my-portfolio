@@ -42,12 +42,12 @@ export default {
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color-white);
   font-family: 'Lato', sans-serif;
 }
 
 #nav a:hover {
-  color: #94ffd3;
+  color: var(--color-cyan);
 }
 
 .nav__links {

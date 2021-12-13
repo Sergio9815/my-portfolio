@@ -30,6 +30,10 @@ export default {
   --in-color:  rgba(212, 212, 255, 0.035);
   --color-text: #242629;
   --color-gray: #E6E6E6;
+  --color-grayD: #bebebe;
+  --color-white: #fff;
+  --color-cyan: #94ffd3;
+  --color-purple: #C1B3FF;
 }
 
 .primaryDark {
@@ -38,20 +42,20 @@ export default {
   transition: .5s;
 }
 .primaryLight {
-  background-color: #fff;
+  background-color: var(--color-white);
   color: var(--color-text);
   transition: .5s;
 }
 
 .secondaryLight {
-  background-color: #bebebe;
+  background-color: var(--color-grayD);
   color: var(--color-text);
     transition: .5s;
 }
 .secondaryDark {
-  background-color: #242629;
+  background-color: var(--color-text);
   color: var(--color-gray);
-      transition: .5s;
+  transition: .5s;
 }
 
 .tertiaryLight {
@@ -59,7 +63,7 @@ export default {
     color: var(--color-text);
 }
 .tertiaryDark {
-  background-color: #caf6bb;
+  background-color: var(--color-cyan);
   color: var(--color-text);
 }
 
@@ -70,17 +74,17 @@ export default {
 
 .glassDark {
   background-color: var(--bg-color);
-  color: #fff;
+  color: var(--color-white);
 }
 
 .glassDark-btn {
   background-color: var(--bg-color);
-  color: #fff;
+  color: var(--color-white);
 }
 
 .glassDark-btn:hover {
-  color: #94ffd3;
-  border: 2px solid #94ffd3;
+  color: var(--color-cyan);
+  border: 2px solid var(--color-cyan);
 }
 
 html {

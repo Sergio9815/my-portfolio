@@ -1,7 +1,7 @@
 <template>
-  <div class="contact">
+  <div id="Contact" class="contact">
 
-    <h4 id="Contact">Contacto</h4>
+    <h4>Contacto</h4>
     <div class="contact__main">
       <section class="contact__form">
         <form ref="form" @submit.prevent="sendEmail">
@@ -12,8 +12,9 @@
                         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></svg>
                       Nombre</label>
                       <input class="input"
-                        v-model="name"
+                        v-model="user"
                         name="name"
+                        type="text"
                         id="name" placeholder="" autocomplete="off">
                     </div>
 
@@ -23,9 +24,10 @@
                       <input class="input"
                         v-model="email"
                         name="email"
+                        type="email"
                         id="email" placeholder="" autocomplete="off">
                         <p
-                          class="hide-text-email check-email animate__animated animate__fadeIn"
+                          class="check-email animate__animated animate__fadeIn"
                           :class="validate ? 'hide-text-email' : ''"
                         >Por favor ingrese una dirección de correo válida.</p>
                     </div>
@@ -83,7 +85,7 @@ export default {
   components: { SpSocialBtn },
   data() {
     return {
-      name: ' ',
+      user: ' ',
       email: ' ',
       message: ' ',
       validate: true,
@@ -103,10 +105,10 @@ export default {
       }
     },
     sendEmail() {
-      if (this.email !== ' ' && this.name !== ' ') {
+      if (this.email !== ' ' && this.user !== ' ') {
         emailjs.sendForm('service_a3vq07x', 'template_csrxm9y', this.$refs.form,
           'user_PUwl5mPHPMN6zZy9S0e28', {
-            name: this.name,
+            name: this.user,
             email: this.email,
             message: this.message,
           })
@@ -148,7 +150,8 @@ export default {
 <style scoped>
 .contact {
   background-color: var(--bg-color);
-  color: white;
+  color: var(--color-white);
+  padding-top: 20px;
 }
 
 h4 {
@@ -174,7 +177,6 @@ h4 {
 
 .contact__form {
   width: 60%;
-  /* background-color: lightcoral; */
   height: 90vh;
   display: flex;
   align-items: center;
@@ -186,10 +188,8 @@ form {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    /* gap: 30px; */
     width: 90%;
     height: 65vh;
-    /* background-color: aquamarine; */
   }
 
 .form__main-data {
@@ -197,7 +197,6 @@ form {
   width: 90%;
   align-items: center;
   justify-content: space-between;
-  /* background-color: lightgreen; */
 }
 
 .form__secondary-data {
@@ -206,68 +205,74 @@ form {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  /* background-color: rgb(78, 183, 231); */
 }
   .form-content {
     width: 47%;
     display: flex;
     flex-direction: column;
+    height: 138px;
   }
 
   .input {
     height: 50px;
-    border: none;
+    border: 2px solid transparent;
     transition: 0.15s;
     font-size: 20px;
-    color: white;
+    color: var(--color-white);
     background-color: var(--in-color);
     font-family: 'Source Sans Pro', sans-serif;
-    /* background-color: darksalmon; */
   }
   .input:hover
   {
-    border: 2px solid #C1B3FF;
+    border: 2px solid var(--color-purple);
   }
   .input:focus {
-    border: 2px solid #C1B3FF;
+    border: 2px solid var(--color-purple);
   }
   input {
     outline: none;
   }
 
+.check-email {
+  font-size: 12px;
+  margin-left: 0;
+  margin-top: 120px;
+  justify-content: flex-start;
+  color: #ff94b4;
+  position: absolute;
+}
   .form-content-2 {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: -15px;
   }
 
   textarea {
     width: 99%;
     height: 250px;
-    border: none;
-    color: white;
+    border: 2px solid transparent;
+    color: var(--color-white);
     font-size: 20px;
     background-color: var(--in-color);
     font-family: 'Source Sans Pro', sans-serif;
-    /* background-color: darksalmon; */
   }
 
   textarea:hover {
-    border: 2px solid #C1B3FF;
+    border: 2px solid var(--color-purple);
   }
 
-  textarea:focus {   border: 2px solid #C1B3FF; }
+  textarea:focus { border: 2px solid var(--color-purple); }
 
   label {
     font-size: 15px;
     margin-bottom: 10px;
-    color: white;
+    color: var(--color-white);
     display: flex;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 20px;
-    /* background-color: darksalmon; */
 
   }
 
@@ -284,9 +289,9 @@ form {
     align-items: center;
     justify-content: center;
     justify-self: flex-start;
-    background-color: white;
+    background-color: var(--color-white);
     text-decoration: none;
-    border: 2px solid #16161A;
+    border: 2px solid var(--bg-color);
     color: var(--bg-color);
     cursor: pointer;
     outline: none;
@@ -296,7 +301,7 @@ form {
     text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
   }
-  .btn:hover { background-color: #C1B3FF; }
+  .btn:hover { background-color: var(--color-cyan); }
 
   .hide-text-email {
     display: none;
@@ -305,8 +310,7 @@ form {
 .contact__info {
   width: 40%;
   border-left: 1px solid rgba(255, 255, 255, 0.253);
-  color: white;
-  /* background-color: antiquewhite; */
+  color: var(--color-white);
 }
 
 .info__data {
@@ -396,7 +400,7 @@ h3 svg {
   }
 
   .contact__form {
-    height: 75vh;
+    height: 85vh;
   }
 
   h3, p {
@@ -413,6 +417,9 @@ h3 svg {
   }
   .form-content {
     width: 100%;
+  }
+  .form-content-2 {
+    margin-top: 0px;
   }
   label {
     margin-top: 15px;

@@ -1,6 +1,6 @@
 <template>
-  <div class="aboutContainer" :class="darkTheme ? 'secondaryLight' : 'secondaryDark'">
-        <div id="About" class="about">
+  <div id="About" class="aboutContainer" :class="darkTheme ? 'secondaryLight' : 'secondaryDark'">
+        <div class="about">
         <figure>
           <img src="../assets/me.webp" alt="">
         </figure>
@@ -13,7 +13,8 @@
             un autodidacta, curioso por estar siempre a la vanguardia de
             las nuevas tecnologías, lo que me ha llevado a estudiar en <b>Platzi</b>
             y dedicar parte de mi tiempo libre a aprender más sobre distintas
-            herramientas de desarrollo web como <b>Ionic, Vue.js</b>, entre otras. .</p>
+            herramientas de desarrollo web como <b>Ionic, Vue, React, Nuxt js</b>,
+            entre otras.</p>
             <a
               :class="darkTheme ? 'tertiaryLight' : 'secondaryDark'"
               v-animate-css.hover="'pulse'" class="btn" href="https://github.com/Sergio9815">
@@ -109,8 +110,8 @@ p {
     font-family: 'Source Sans Pro', sans-serif;
   }
   .btn:hover {
-    background-color: #FFF;
-    color: #16161A;
+    background-color: var(--color-white);
+    color: var(--bg-color);
   }
 
 @media only screen and (max-width: 1000px) {

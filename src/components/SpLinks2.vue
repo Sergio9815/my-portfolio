@@ -86,7 +86,7 @@ export default {
     justify-content: space-around;
   }
   #nav a:hover {
-    color: white;
+    color: var(--color-white);
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template >
-    <div class="project-main" :class="darkTheme ? 'secondaryLight' : 'secondaryDark'">
+    <div id="Projects" class="project-main" :class="darkTheme ? 'secondaryLight' : 'secondaryDark'">
         <section class="projects">
-          <h3 id="Projects">Mis Proyectos</h3>
+          <h3>Mis Proyectos</h3>
             <div class="projects__cards-container">
 
               <div class="p-card"
@@ -341,6 +341,9 @@ h4 {
     font-family: 'Source Sans Pro', sans-serif;
   }
 
+  .glass a:hover {
+    background-color: var(--color-white);
+  }
 @media only screen and (max-width: 1000px) {
   .projects {
     padding: 0px;
