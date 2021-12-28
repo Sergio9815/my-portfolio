@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Contact from '@/views/Contact.vue';
+import Contact from '@/views/TheFooter.vue';
 import SpMenu from '@/components/SpMenu.vue';
 
 export default {
@@ -62,6 +62,7 @@ export default {
   background-color: transparent;
     color: var(--color-text);
 }
+
 .tertiaryDark {
   background-color: var(--color-cyan);
   color: var(--color-text);
