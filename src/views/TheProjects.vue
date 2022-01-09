@@ -34,20 +34,6 @@
                 </div>
               </div>
 
-              <div class="p-card" :class="darkTheme ? 'glass' : 'glassDark'">
-                <figure>
-                  <img src="../assets/autos.webp" alt="Autos Turbo page preview">
-                </figure>
-                <div class="p-card-desc">
-                  <h4>Autos Turbo PTY</h4>
-                  <p>Landing page desarrollado para la empresa Autos turbo PTY, la cual se
-                    dedica a la venta de autos usados y refacciones importadas en Panamá.
-                  </p>
-                  <AppIcons :css="true" :js="true" :vue="true" />
-                  <AppButton url="https://autosturbopty.com"/>
-                </div>
-              </div>
-
               <div class="p-card"
                 :class="darkTheme ? 'glass' : 'glassDark'">
                 <figure>
