@@ -16,7 +16,7 @@
                       desarrollo web mediante el empleo de diversas tecnologías.
                     </p>
                     <AppButton
-                      url="https://drive.google.com/file/d/1S_66NNE9IYL7P2Vq6HN9sbMoybgpwy0_/view?usp=sharing"
+                      url="https://drive.google.com/file/d/1WYYlsu2Qa77vDU7bAVL5hdWjGlX8G1W_/view?usp=sharing"
                       content="Descargar CV"
                       :icon="2"
                       light="tertiaryLight cyan"
