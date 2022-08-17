@@ -106,7 +106,7 @@ export default {
     },
     sendEmail() {
       if (this.email !== ' ' && this.user !== ' ') {
-        emailjs.sendForm('service_a3vq07x', 'template_csrxm9y', this.$refs.form,
+        emailjs.sendForm('service_x2tsals', 'template_csrxm9y', this.$refs.form,
           'user_PUwl5mPHPMN6zZy9S0e28', {
             name: this.user,
             email: this.email,
